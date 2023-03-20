@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Languages Syntax</title>
+    <link rel = "stylesheet" href = "../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/additional.css">
+    <link rel="stylesheet" href="../CSS/pop.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Java</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="nav_bar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="python.html">Python</a></li>
+                <li><a href="java.html">Java</a></li>
+                <li><a href="javascript.html">JavaScript</a></li>
+                <li><a href="php.html" id = "php.html">PHP</a></li>
+                <li><a href="css.html">CSS</a></li>
+                <li><a href="html.html">HTML</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <div class="intro menuOpen">
+        <h2>Notes</h2>
+        <ul class="count">
+            <li><code>&lt;?php&gt;</code> tags indicate PHP code and everything written inside them will be rendered as PHP.</li>
+            <li>PHP is fully object-oriented programming language.</li>
+            <li>PHP is used for creating dynamic web pages.</li>
+            <li>Its syntax is based on C and C++ programming languages.</li>
+            <li>PHP is often used in conjunction with HTML and CSS.</li>
+            <li>PHP is a dynamically typed language, which means that you do not need to specify the data type of a variable when you declare it.</li>
+          </ul>
+    </div>
+
+    <div class="syntax">
+        <h2>Syntax</h2>
+        <br><br>
+        <h3>Output:</h3>
+        <pre><code class="language-php">
+            <?php
+            // printing to the HTML document
+            // that means we modify the HTML
+            // all of that happens on the web server
+            echo "<h1>Hello World</h1>";
+            print "<hr/>";
+            echo "<p>This is a PHP print syntax</p>";
+            echo "<br/>";
+            
+            // concatenating strings
+            $str1 = "Hello";
+            $str2 = "World";
+            echo $str1 . " " . $str2 . "!"; // outputs "Hello World!"
+            echo "<br/>";
+            
+            // basic arithmetic
+            $x = 10;
+            $y = 20;
+            echo "The sum of x and y is " . ($x + $y); // outputs "The sum of x and y is 30"
+            ?>
+        </code></pre>
+        <h3>Variables</h3>
+        <ul>
+            <li>case sensitive, and must start with the <code>$</code> sign</li>
+            <li>can include letters, numbers, and underscore</li>
+            <li>use the same rules for convention as other programming languages</li>
+        </ul>
+        <pre><code class="language-php">
+            <?php
+            $name = "Ahmed";
+            $age = 21;
+            $strong = true;
+            
+            // Automatically converts and adds the name
+            echo "Your name is $name.<br>";
+            
+            // Concatenating variables with strings
+            echo "You are " . $age . " years old.<br>";
+            ?>
+        </code></pre>
+
+        <h3>Casting in PHP</h3>
+            <p>To cast a variable to a certain data type, you can use the (data type) syntax.</p>
+            <p>Here are some examples:</p>
+            <pre><code class="language-php">
+                echo ((int) 3.14) . "&lt;br&gt;";
+                echo ((int) "80" + (float) "60.5") . "&lt;br&gt;";
+                echo intval("80") + floatval("60.5");
+                </code></pre>
+            <p>The output of the code above would be:</p>
+            <pre><code>
+                3
+                140.5
+                140.5
+            </code></pre>
+
+        <h3>Strings</h3>
+        <pre><code class="language-java">
+            <pre><code class="language-php">
+                <?php
+                $greetings = "hello";
+                //0 indexed as other languages
+
+                echo "Length: " . strlen($greetings) . "<br>"; // length
+                echo "First index: " . $greetings[0] . "<br>"; // first index
+                echo "Last index: " . $greetings[-1] . "<br>"; // starts from the back
+                echo "Replacing l with Z: " . str_replace("l", "Z", $greetings) . "<br>"; // replace all the l with z
+                echo "Returns from ll: " . strchr($greetings, "ll") . "<br>"; // returns from that chr, here will be llo
+
+                // concatenation
+                $fname = "John";
+                $lname = "Doe";
+                echo "Full name: " . $fname . " " . $lname . "<br>";
+
+                // using variables inside strings
+                $age = 25;
+                echo "I am " . $age . " years old <br>";
+                echo "My name is $fname and I am $age years old <br>";
+
+                // converting to uppercase and lowercase
+                $word = "Hello World";
+                echo "Uppercase: " . strtoupper($word) . "<br>";
+                echo "Lowercase: " . strtolower($word) . "<br>";
+
+                // trimming
+                $phrase = "    Hello World    ";
+                echo "Trimmed: " . trim($phrase) . "<br>";
+
+                // substrings
+                $long_word = "supercalifragilisticexpialidocious";
+                echo "First 5 characters: " . substr($long_word, 0, 5) . "<br>";
+                echo "Last 5 characters: " . substr($long_word, -5) . "<br>";
+                ?>
+            </code></pre>
+
+        <h3>Numbers</h3>
+        Sure, here's the code with <pre> and <code> tags with class language-php:
+
+            html
+            Copy code
+            <pre><code class="language-php">
+            //Numbers
+            // the normal basic arithmetic
+            echo(2 * 3)."<br>";
+            echo(2 ** 3). "<br>";
+            echo(10 % 3)."<br>";
+            echo(1 + 2 * 3)."<br>";
+            echo(10 / 3)."<br>"; //as in python it'll return fraction
+            
+            echo "<br>";
+            
+            $num = 10;
+            $num += 100;
+            //as you see even when we call it we call it using the $ sign
+            echo $num."<br>";
+            $num++;
+            echo $num."<br><br>";
+            
+            //useful math methods
+            echo max(2, 3)."<br>";
+            echo sqrt(144)."<br>";
+            echo round(2.7)."<br>";
+            </code></pre>
+    </div>
+    
+    <h3>Taking Input</h3>
+    <ul>
+		<li>Here's where we create a form in HTML</li>
+		<li>Send it to the PHP and then the PHP, make the database defenses</li>
+		<li>To avoid injection and then sends it to the database</li>
+		<li>Notice something is we can put the HTML code in here with the PHP</li>
+		<li>This is the same as putting your PHP above the HTML</li>
+		<li>Kinda of similar to putting the JavaScript in the script tags, or the CSS in the style tags</li>
+	</ul>
+    <pre><code class="language-html">
+        <form action="nameofthefile.php" method="POST">
+            Username : <input type="text" name="username">
+        </form>
+    </code></pre>
+    <pre><code class="language-php">
+        <?php
+
+        echo $_POST["Username"];
+        echo "<br>";
+        $age = $_POST["age"];
+        echo $age;
+        ?>
+    </code></pre>
+    <ul>
+        <li>Using the GET will make it show in the URL. It uses the URL to get that information, which means you can even send it through the info, as when you store information for a bookmark and those stuff.</li>
+        <li>Using the POST is a more secure way, and won't show in the URL. It being passed more securely doesn't pass through the URL.</li>
+    </ul>
+
+    <h3>Arrays</h3>
+    <pre><code class="language-php">
+        $numbers = [4, 8, "seven", 42.0];
+        //0 indexed, dynamic so you can put different data types in the same array
+        //as a C++ user this doesn't feel comfortable lol
+        
+        numbers[0] = 7;
+        echo numbers[0]."&lt;br&gt;";
+        echo numbers[1]."&lt;br&gt;";
+        echo count(numbers)."&lt;br&gt;";
+        
+        
+        //can leave it empty
+        numbers = [];
+        numbers[0] = 90;
+        
+        echo numbers[1]."&lt;br&gt;";
+        //will print empty, again something doesn't feel right lol
+        
+        //N Dimensional Lists
+        $numbers_2d = [[1, 2], [3, 4]];
+        echo numbers[0][0]."&lt;br&gt;";
+        echo numbers[0][1]."&lt;br&gt;";
+        
+        //List functions
+        $friends = [];
+        array_push($friends, "ahmed", "mansour");
+        array_push($friends, "friends");
+        
+        echo "$friends[0], $friends[1], $friends[2] &lt;br&gt;";
+        sort($friends);
+        echo in_array("Mohammed", $friends); //true and false which are 1 and nothing
+        
+        //Associative Arrays
+        //like a dictionary in python which means keys and values
+        
+        $testGrades = array{
+            "Ahmed" => "A+",
+            "Youssef" => "C", 
+            "Mohammed" => "A";
+            3 => 97.5;
+        };
+        
+        echo $testGrades["ahmed"]."&lt;br&gt;";
+        echo $testGrades["mohamed"]."&lt;br&gt;";
+        echo $testGrades[3]."&lt;br&gt;";
+        //notice the 3 is not an index but the key
+    </code></pre>
+
+    <h3>Functions</h3>
+    <pre><code class="language-php">
+            <!-- In PHP, you can define a function using the 'function' keyword -->
+            <!-- Functions can take parameters and return a value -->
+            <!-- Here's an example of a function that adds two numbers -->
+            
+            <?php
+            function addNumbers($num1, $num2){
+                return $num1 + $num2;
+            }
+            
+            $sum = addNumbers(4, 3);
+            echo "The sum is: $sum <br>";
+            
+            // You can also define functions with default parameter values
+            function greet($name = "Guest"){
+                echo "Hello, $name! <br>";
+            }
+            
+            greet(); // Outputs: "Hello, Guest!"
+            greet("John"); // Outputs: "Hello, John!"
+            
+            // You can also pass arguments by reference instead of value
+            function double(&$number){
+                $number *= 2;
+            }
+            
+            $value = 5;
+            double($value);
+            echo "The value is now: $value <br>";
+            
+            // You can also use variable functions, which allows you to call a function whose name is stored in a variable
+            function sayHello(){
+                echo "Hello! <br>";
+            }
+            
+            $functionName = "sayHello";
+            $functionName(); // Outputs: "Hello!"
+            
+            // You can also return multiple values from a function using an array
+            function getPerson(){
+                $person = array("John", "Doe", 25);
+                return $person;
+            }
+            
+            list($firstName, $lastName, $age) = getPerson();
+            echo "First Name: $firstName, Last Name: $lastName, Age: $age <br>";
+            
+            // You can also use anonymous functions, also known as closures
+            $greeting = function($name){
+                echo "Hello, $name! <br>";
+            };
+            
+            $greeting("Alice");
+        </code></pre>
+
+    <h3>Conditions</h3>
+    <pre>
+        <code class="language-php">
+            <?php
+            //if statements
+      
+            $isLoser = true;
+            $isBrainwashed = true;
+      
+            if($isLoser && $isBrainwashed){
+                echo "you are a brainwashed loser, cure your brain";
+            }
+            else if(!$isLoser && !$isBrainwashed){
+                echo "You are a rare person, you got my respect friend, let's meet up out of the matrix";
+            }
+            else{
+                echo "whatever";
+            }
+      
+            if(1 < 3){
+                echo "wow true comparison";
+            }
+      
+            echo "<br>";
+      
+            if("dog" == "cat"){
+                echo "wow string comparison";
+            }
+      
+            //Switch Statements
+            $myGrade = "A";
+            switch($myGrade){
+                case "A":
+                    echo "you know what you are doing getting out of the matrix should be through the matrix";
+                    break;
+                case "F":
+                    echo "now you are a loser and in the matrix, just don't give up";
+                    break;
+                default:
+                    echo "Invalid grade";
+            }
+          ?>
+        </code>
+    </pre>
+
+    <h3>Loops</h3>
+    <pre>
+        <code class="language-php">
+            <?php
+            //while loop
+            $index = 1;
+            while($index <= 5){
+                echo $index;
+                $index += 1;
+            }
+
+            //do while loop
+            do{
+                echo $index;
+                $index += 1;
+
+            }while($index <= 5)
+            //I want to know when do we need this do while loop
+            //I don't remember using it at all :)
+
+            //for loop
+            for($i = 0; $i < 5; $i++){
+                echo $i;
+            }
+
+            //foreach loop
+            $numbers3 = [4, 5, 2, "fifty", 3.2];
+            foreach($numbers3 as num){
+                echo $num."<br>";
+            }
+            ?>
+        </code>
+    </pre>
+
+    <h3>Exception Handling</h3>
+    <pre>
+        <code class="language-php">
+            //exceptions
+            try{
+                throw new Exception('Something bad happened');
+            } catch(Exception $e){
+                echo $e->getMessage();
+            } finally{
+                echo "<br> this code gets executed no matter what";
+            }
+            throw new ArithmeticException("Can't perform operation"); //throwing an exception with a message
+        </code>
+    </pre>
+
+    <h3>OOP</h3>
+    <p class="oop">
+    <pre>
+        <code class="language-php">
+            <!-- it's a fully object-oriented language -->
+                <?php
+                class Book{
+                    var $title;
+                    public $author;
+                    public static $staticAttribute = "My Static Attribute";
+                    function __construct($title, $author){
+                        $this->title = $title;
+                        $this->author = $author;
+                    }
+                    //the constructor
+                    //this language seems to me like a hybrid between python and c++
+                    function readBood(){
+                        echo "Reading $this->title by $this->author";
+                    }
+                }
+                //static means will be defined on the class, means will be shared by all of the objects of the class
+                //also means it's a class level and not an object level
+
+                $book1 = new Book("Harry Potter", "whatever");
+                $book1->title = "nothing";
+                $book1->author = "void"; 
+
+                //-> as in c++
+
+                echo $book->title."<br>";
+                echo Book::$staticAttribute."<br>";
+                $book1->readBook();
+
+
+                //Design Patterns (Setters and getters)
+                class Book{
+                    private $title;
+                    private $author;
+                    function __construct($title, $author){
+                        $this->setTitle($title);
+                        $this->author = $author;
+                    }
+
+                    function getTitle(){
+                        return $this->title;
+                    }
+                    function setTitle($title){
+                        $this->title = $title;
+                    }
+                    //the constructor
+                    //this language seems to me like a hybrid between python and c++
+                    function readBood(){
+                        echo "Reading $this->title by $this->author";
+                    }
+                }
+
+                $book1 = new Book("harry potter", "whatever");
+                $book1->setTitle("title");
+                echo $book1->getTitle();
+
+
+                //Inheritance
+                class Chef{
+                    public $name;
+                    public $age;
+                    function __construct($name, $age){
+                        $this->name = $name;
+                        $this->age = $age;
+                    }
+                    function makeChicken(){
+                        echo "The chef makes chicken";
+                    }
+
+                    function makeSalad(){
+                        echo "The chef makes salad";
+                    }
+
+                    function makeSpecialDish(){
+                        echo "The chef makes a special salad";
+                    }
+                }
+
+                //what a messy language it even uses the extends as javascript
+                class ItalianChef extends Chef{
+                    public $country;
+                    function __construct($name, $age, $country){
+                        $this->country = $country;
+                        parent::__construct($name, $age);
+                        //this is how to call the parent class to set up those attributes
+                        //instead of doing it in the child, and just set the attributes which are only for the child
+                    }
+                    function makePasta(){
+                        echo "Leave the chef alone";
+                    }
+
+                    function makeSpecialDish(){
+                        echo "The chef is making a special Italian salad";
+                    }
+                    //overriding
+                }
+
+                $chef = new Chef();
+                $italianChef = new ItalianChef("Italian Chef", 30, "Italy");
+
+                $chef->makeChicken();
+                $italianChef->makeChicken();
+                ?>
+            </code>
+    </pre>
+
+    <br><br>
+
+    <h3>Example</h3>
+    <p>this is the last part of the registration page we created in the html summary page</p>
+    <ul>
+        <li>first check if the request that came from the register.html through the submit
+            was a post
+        </li>
+        <li>then establich the connection, make sure to put something that tells you whetehr the connection 
+            was successful or not in the connect function
+        </li>
+        <li>take the data of the form and start your defences with test_input</li>
+        <li>then the the rest of the defences of database injection and finally close the conneciton</li>
+    </ul>
+    <pre>
+        <code class="language-php">
+
+            function test_input($data){
+                //do the defences
+                return $data;
+            }
+            
+            if($_SERVER["REQUEST_METHOD"] == "POST")
+            {
+                $conn = connect();
+
+                $first_name = test_input($_POST['first_name']);
+                $last_name = test_input($_POST['last_name']);
+                $email = test_input($_POST['email']);
+                $password = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+
+                //here put the rest of the defences before sending it to the database
+                $conn->close();
+            }
+
+
+        </code>
+    </pre>
+    
+    <script src="../Javascript/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../Javascript/index.js"></script>
+</body>
+</html>

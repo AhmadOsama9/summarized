@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Languages Syntax</title>
+    <link rel = "stylesheet" href = "../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/additional.css">
+    <link rel="stylesheet" href="../CSS/pop.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Python</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="nav_bar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="python.html">Python</a></li>
+                <li><a href="java.html">Java</a></li>
+                <li><a href="javascript.html">JavaScript</a></li>
+                <li><a href="php.html" id = "php.html">PHP</a></li>
+                <li><a href="css.html">CSS</a></li>
+                <li><a href="html.html">HTML</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <div class="intro menuOpen">
+        <h2>Introduction</h2>
+        <ul class="count">
+            <li>Python is a general-purpose programming language.</li>
+            <li>One of the key features of Python is its focus on readability, making it easier to write and understand code.</li>
+            <li>Python does not use semicolons or brackets, instead, it uses indentation to define blocks of code.</li>
+            <li>The most common way to indent in Python is to use four spaces.</li>
+            <li>Python is a dynamically typed language, which means you don't need to define the type of a variable when you declare it.</li>
+            <li>We will be writing python on thin air, we can say print, without creating functions like main, or a class like java</li>
+        </ul>
+    </div>
+
+    <div class="syntax">
+        <h2>Syntax</h2>
+        <br><br>
+        <h3>Strings</h3>
+        <pre>
+            <code class="language-python">
+                # Creating a string
+                message = "Hello, world!"
+                print(message)
+
+                # Concatenating two strings
+                name = "Ahmed"
+                greeting = "Hi, " + name + "!"
+                print(greeting)
+
+                # String length
+                length = len(message)
+                print("Length of message:", length)
+
+                # Accessing a character in a string
+                first_char = message[0]
+                print("First character:", first_char)
+
+                # Slicing a string
+                substring = message[2:5]
+                print("Substring:", substring)
+
+                # Replacing a substring in a string
+                replaced = message.replace("world", "Python")
+                print("Replaced message:", replaced)
+
+                # Finding a substring in a string
+                index = message.find("world")
+                if index != -1:
+                    print("Found 'world' at index:", index)
+                else:
+                    print("Substring not found")
+
+                # Counting occurrences of a substring in a string
+                count = message.count("l")
+                print("Number of 'l' in message:", count)
+            </code>
+        </pre>
+
+
+
+    <h3>Numbers</h3>
+    <p>In Python, there are two main types of numeric data: integers and floating-point numbers.</p>
+    <p><strong>Integers:</strong> Integers represent whole numbers without any decimal points. They can be positive, negative, or zero. Here's an example of declaring and assigning an integer variable:</p>
+    <pre>
+        <code class="language-python">
+            my_number = 42
+        </code>
+    </pre>
+    <p><strong>Floating-point numbers:</strong> Floating-point numbers are used to represent decimal values. They can also be positive, negative, or zero. Python provides two types of floating-point numbers: float and complex. Here's an example:</p>
+    <pre>
+        <code class="language-python">
+            my_decimal = 3.14159
+        </code>
+    </pre>
+    <p><strong>Arithmetic operations:</strong> You can perform basic arithmetic operations on numeric variables in Python, such as addition, subtraction, multiplication, and division. Here's an example:</p>
+    <pre>
+        <code class="language-python">
+            x = 10
+            y = 5
+            sum = x + y # sum is now 15
+            difference = x - y # difference is now 5
+            product = x * y # product is now 50
+            quotient = x / y # quotient is now 2.0 (floating-point division)
+        </code>
+    </pre>
+    <p><strong>Increment and decrement operators:</strong> Unlike in Java, Python does not have increment and decrement operators (i++ or i--). Instead, you can use the += and -= operators to achieve the same effect. Here's an example:</p>
+    <pre>
+        <code class="language-python">
+            i = 0
+            i += 1 # i is now 1
+            i -= 1 # i is now 0 again
+        </code>
+    </pre>
+    <p><strong>Math library:</strong> Python provides a math module that includes many useful mathematical functions. Here's an example of using the math module to calculate the square root of a number:</p>
+    <pre>
+        <code class="language-python">
+            import math
+            my_number = 16.0
+            square_root = math.sqrt(my_number) # square_root is now 4.0
+        </code>
+    </pre>
+    <p>Here are some additional examples of arithmetic operations and math functions:</p>
+    <pre>
+        <code class="language-python">
+            # Basic arithmetic operators
+            print(2 * 3) # multiplication
+            print(2 ** 3) # exponentiation (2 raised to the power of 3)
+            print(10 % 3) # modulus (remainder of division)
+            print(1 + 2 * 3) # order of operations (PEMDAS)
+            print(10 // 3) # integer division (rounds down)
+
+            # Math functions
+            print(pow(2, 3)) # exponentiation (same as 2 ** 3)
+            print(math.sqrt(144)) # square root
+            print(round(2.7)) # rounding to nearest integer
+            print(math.floor(2.7)) # rounding down
+            print(math.ceil(2.7)) # rounding up
+            print(abs(-10)) # absolute value
+        </code>
+    </pre>
+    
+    <h3>Taking Input</h3>
+    <p>by default taking input from the user will be string<br>
+    to convert it we use casting on the input</p>
+    <pre>
+        <code class="language-python">
+            name = input("Enter your name: ")
+            print("Hello, " + name + "!")
+
+            # Taking input of an integer
+            num = int(input("Enter an integer: "))
+            print("You entered: " + str(num))
+
+            # Taking input of a float
+            flt = float(input("Enter a float: "))
+            print("You entered: " + str(flt))
+
+        </code>
+    </pre>
+
+    <h3>Lists and Arrays</h3>
+
+    <pre>
+        <code>
+            # Lists in Python
+            numbers = [4, 8, "fifteen", 16, 42.0]
+            numbers[0] = "something"    # change the value of the first element
+            print(numbers[0])           # output: "something"
+            print(numbers[1])           # output: 8
+            print(numbers[-1])          # output: 42.0 (last element)
+            print(numbers[2:4])         # output: ["fifteen", 16] (slicing)
+            print(len(numbers))         # output: 5 (length of the list)
+
+            # 2D lists in Python
+            numbers2 = [[1, 2], [3, 4]]
+            numbers2[0][0] = 99         # change the value of the first element in the first sublist
+            print(numbers2[0][0])       # output: 99
+            print(numbers2[0][1])       # output: 2
+
+            # List functions in Python
+            friends = []
+            friends.append("bakry")     # add "bakry" to the end of the list
+            friends.insert(0, "youssef")# insert "youssef" at index 0
+            print(friends.index("bakry"))# output: 1 (index of "bakry")
+            print(friends.count("youssef"))# output: 1 (number of occurrences of "youssef")
+            friends.sort()              # sort the list
+            friends.clear()             # remove all elements from the list
+            print(friends)              # output: [] (empty list)
+        </code>
+    </pre>
+
+    <pre>
+        <code class="language-python">
+            # Tuples in Python
+            #the same as Lists(arrays) but immutable
+            #once you define it you can't modify it
+            numbers3 = (4, 8, "fifteen", 42.0)
+        </code>
+    </pre>
+    <p>
+        In general, arrays are better, but tuples serve a specific purpose.
+    </p>
+    <pre>
+        <code class="language-python">
+            #Dictionaries using the {}, also don't forget the comma bettween the elements
+            # a list but we store key and value pairs for more than one datatype
+            # like the map, but with different datatype
+
+
+            test_grades = {
+                "ahmed" : "A+",
+                "someone" : "C",
+                3 : 95.2
+
+            }
+        </code>
+    </pre>
+
+    <h3>If Conditions in Python</h3>
+    <p>the condition to be checked, and then a colon</p>
+    <p>Here's an example:</p>
+    <pre>
+    <code class="language-python">
+    is_loser = True
+
+    if is_loser:
+        print("You are a loser ")
+    </code>
+    </pre>
+    <pre>
+    <code class="language-python">
+    x = 5
+
+    if x > 3:
+        print("x is greater than 3")
+    </code>
+    </pre>
+    <pre>
+    <code class="language-python">
+    is_loser = True
+    in_matrix = True
+
+    if is_loser and in_matrix:
+        print("You are a loser and inside the matrix, I feel bad for you, change your self ASAP search for the real world")
+    </code>
+    </pre>
+    <pre>
+    <code class="language-python">
+    x = 5
+
+    if x > 10:
+        print("x is greater than 10")
+    elif x > 5:
+        print("x is greater than 5 but less than or equal to 10")
+    else:
+        print("x is less than or equal to 5")
+    </code>
+    </pre>
+    <pre>
+    <code class="language-python">
+    x = 5
+
+    if x > 10:
+        print("x is greater than 10")
+    else:
+        print("x is less than or equal to 10")
+    </code>
+    </pre>
+
+    <h3>Loops</h3>
+    <p>Loops are used in programming to repeat a set of statements until a specific condition is met. Python has two main types of loops: <code>while</code> loops and <code>for</code> loops.</p>
+    <h4>While Loops</h4>
+    <p>A <code>while</code> loop will continue to execute a block of code as long as the condition being checked is true. The general structure of a <code>while</code> loop is:</p>
+    <pre><code class="language-python">while condition:
+        # code block to be executed</code></pre>
+    <p>Here's an example of a <code>while</code> loop that prints the values from 1 to 5:</p>
+    <pre><code class="language-python"># while loop
+    index = 1
+    while index &lt;= 5:
+        print(index)
+        index += 1</code></pre>
+    <h4>For Loops</h4>
+    <p>A <code>for</code> loop is used to iterate over a sequence of elements (such as a list, tuple, or string), executing the same block of code for each element. The general structure of a <code>for</code> loop is:</p>
+    <pre><code class="language-python">for variable in sequence:
+        # code block to be executed</code></pre>
+    <p>Here's an example of a <code>for</code> loop that prints the values from 0 to 9:</p>
+    <pre><code class="language-python"># for loop
+    for index in range(10):
+        print(index)</code></pre>
+    <p>You can also use a <code>for</code> loop to iterate over a list or tuple:</p>
+    <pre><code class="language-python"># iterating over a list
+    numbers = [1, 2, 3, 4, 5]
+    for num in numbers:
+        print(num)
+
+    # iterating over a tuple
+    numbers2 = (1, 2, 3, 4, 5)
+    for num in numbers2:
+        print(num)</code></pre>
+    <p>Finally, you can use a <code>for</code> loop to iterate over the characters of a string:</p>
+    <pre><code class="language-python"># iterating over a string
+    for letter in "ahmed":
+        print(letter)</code></pre>
+
+
+    <h3>Exception</h3>
+    <p>Here's an example of how to handle an exception in Python:</p>
+    <pre>
+        <code class="language-python">
+    try:
+        answer = 10 / int(input("Enter number: "))
+    except:
+        print("Don't enter 0, cause 10 / 0 won't give you infinity it'll give an error")
+        </code>
+    </pre>
+    <pre>
+        <code class="language-python">
+    try:
+        answer2 = 10 / int(input("Enter number: "))
+    except ZeroDivisionError as e:
+        print(e)
+    except:
+        print("Caught any exception")
+        </code>
+    </pre>
+
+    <h3>OOP in Python</h3>
+	<h3>Book class</h3>
+	<p>__init__ is the constructor. Always use self, which is that specific instance of the class you will need to pass it to all the functions.</p>
+	<pre><code class="language-python">
+    class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+    def read_book(self):
+        print("Reading ", self.title, "by",self.author)
+
+    book1 = Book("Harry potter", "jk Rowling")
+
+    print(book1.title)
+    book1.read_book() 
+	</code></pre>
+
+	<h3>Getters and Setters</h3>
+	<p>Design patterns to control the access the outside code has on your class.</p>
+	<pre><code class="language-python">
+    @property
+    def title(self):
+        print("getting title")
+        return self._title
+
+    # ._ and then the attribute. The _ means it's going to be private.
+
+    @title.setter
+    def title(self, value):
+        print("setting title")
+        self._title = value
+
+    @title.deleter
+    def title(self):
+        del self._title
+        </code></pre>
+
+    <h3>Inheritance</h3>
+    <pre><code class="language-python">
+    class Chef:
+        def __init__(self, name, age):
+            self.name = name
+            self.age = age
+        def make_Chicken(self):
+            print("The chef makes chicken")
+
+        def make_Salad(self):
+            print("the chef makes salad")
+        
+        def make_Special_dish(self):
+            print("the chef makes bbq ribs")
+
+    class ItalianChef(Chef):
+
+        def __init__(self, name, age, country):
+            self.country = country
+            super().__init__(name, age)
+
+        def make_pasta(self):
+            print("the chef makes pasta")
+        
+        def make_special_dish(self): #overriding
+            print("a special salad")
+        
+    chef1 = Chef("noname", 25)
+    chef2 = ItalianChef()
+
+    chef1.make_Chicken()
+    chef2.make_Chicken()
+	</code></pre>
+    
+    <script src="../Javascript/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../Javascript/index.js"></script>
+</body>
+</html>

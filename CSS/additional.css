@@ -1,0 +1,67 @@
+:root {
+    --primary-color: #0072c6;
+    --secondary-color: #11101b;
+    --tertiary-color: #f3f3f3;
+    --background-color: linear-gradient(to right, #00d2ff, #3a7bd5);
+}
+
+h3 {
+    font-size: clamp(1rem, 2vw, 5rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--secondary-color);
+    border-bottom: 0.5% solid var(--primary-color);
+    margin-bottom: 0.5%;
+}
+  
+p {
+    font-size: clamp(1rem, 2vw, 4rem);
+    line-height: 1.5;
+    color: #1f0000;
+    margin-bottom: 1.5em;
+}
+
+.intro {
+    font-size: clamp(1rem, 5vw, 4rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1;
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 0.5%;
+}
+
+h2 {
+    font-size: clamp(2rem, 3vw, 5rem);
+}
+
+ul li {
+    font-size: clamp(1rem, 3vw, 3rem);
+    color: #1f0000;
+    margin: 0.1;
+}
+
+body {
+    counter-reset: mycounter;
+}
+
+.count li:before {
+    counter-increment: mycounter;
+    content: counter(mycounter, upper-roman);
+    display: inline-block;
+    min-width: 30px;
+    min-height: 20px;
+    text-align: center;
+    border-radius: 75%;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    position: relative;
+    z-index: -1;
+}
+
+
+
+
+
+
