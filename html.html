@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Languages Syntax</title>
+    <link rel = "stylesheet" href = "CSS/style.css">
+    <link rel="stylesheet" href="CSS/additional.css">
+    <link rel="stylesheet" href="CSS/pop.css">
+</head>
+<body>
+    <header>
+        <div class="logo">HTML</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="nav_bar">
+            <ul>
+                <li><a href="HTML/index.html">Home</a></li>
+                <li><a href="HTML/python.html">Python</a></li>
+                <li><a href="HTML/java.html">Java</a></li>
+                <li><a href="HTML/javascript.html">JavaScript</a></li>
+                <li><a href="HTML/php.html" id = "php.html">PHP</a></li>
+                <li><a href="HTML/css.html">CSS</a></li>
+                <li><a href="HTML/html.html">HTML</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <div class="intro menuOpen">
+        <h2>Notes</h2>
+        <ul class="count">
+            <li>HTML stands for HyperText Markup Language and is used to create web pages.</li>
+            <li>HTML documents are made up of HTML tags which define and describe the content of a web page.</li>
+            <li>HTML tags consist of a pair of opening and closing tags and can contain text, images, links, forms, and other multimedia elements.</li>
+            <li>The basic structure of an HTML document includes a DOCTYPE declaration, a head section, and a body section.</li>
+            <li>The DOCTYPE declaration is used to tell the web browser which version of HTML is being used.</li>
+            <li>The head section includes metadata such as title, keywords, and description, and links to external files such as CSS and JavaScript.</li>
+            <li>The body section includes the main content of the web page.</li>
+            <li>HTML tags are categorized into two types: block-level and inline-level.</li>
+            <ul>
+              <li>Block-level tags create a new paragraph or section on the web page.</li>
+              <li>Inline-level tags are used to style text within a paragraph or section.</li>
+            </ul>
+          </ul>
+    </div>
+    <div class="syntax">
+        <h2>Syntax</h2>
+
+        <h2>Basic Structure</h2>
+        <p>Every HTML page consists of the following basic structure:</p>
+        <pre><code class="language-html">
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+                &lt;head&gt;
+                    &lt;title&gt;Page Title&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    Content goes here
+                &lt;/body&gt;
+            &lt;/html&gt;
+        </code></pre>
+
+        <h2>Headings</h2>
+        <p>There are 6 levels of headings, from &lt;h1&gt; to &lt;h6&gt;, with &lt;h1&gt; being the largest and most important heading:</p>
+        <pre><code class="language-html">
+            &lt;h1&gt;Heading 1&lt;/h1&gt;
+            &lt;h2&gt;Heading 2&lt;/h2&gt;
+            &lt;h3&gt;Heading 3&lt;/h3&gt;
+            &lt;h4&gt;Heading 4&lt;/h4&gt;
+            &lt;h5&gt;Heading 5&lt;/h5&gt;
+            &lt;h6&gt;Heading 6&lt;/h6&gt;
+        </code></pre>
+
+        <h2>Paragraphs</h2>
+        <p>Use the &lt;p&gt; tag to create paragraphs:</p>
+        <pre><code class="language-html">
+            &lt;p&gt;This is a paragraph.&lt;/p&gt;
+            &lt;p&gt;This is another paragraph.&lt;/p&gt;
+        </code></pre>
+
+        <h2>Links</h2>
+        <p>Use the &lt;a&gt; tag to create links:</p>
+        <pre><code class="language-html">
+            &lt;a href="https://www.example.com"&gt;Link text&lt;/a&gt;
+        </code></pre>
+
+        <h2>Images</h2>
+        <p>Use the &lt;img&gt; tag to display images:</p>
+        <pre><code class="language-html">
+            &lt;img src="image.jpg" alt="Image description"&gt;
+        </code></pre>
+
+        <h2>Lists</h2>
+        <p>There are two types of lists: ordered and unordered. Use the &lt;ul&gt; tag for unordered lists and the &lt;ol&gt; tag for ordered lists:</p>
+        <pre><code class="language-html">
+            &lt;ul&gt;
+                &lt;li&gt;List item 1&lt;/li&gt;
+                &lt;li&gt;List item 2&lt;/li&gt;
+                &lt;li&gt;List item 3&lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;ol&gt;
+                &lt;li&gt;List item 1&lt;/li&gt;
+                &lt;li&gt;List item 2&lt;/li&gt;
+                &lt;li&gt;List item 3&lt;/li&gt;
+            &lt;/ol&gt;
+        </code></pre>
+        <h3>Tables</h3>
+        <p>Creating a table:</p>
+        <pre>
+            <code class="language-html">
+                &lt;table&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Header 1&lt;/th&gt;
+                        &lt;th&gt;Header 2&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Data 1&lt;/td&gt;
+                        &lt;td&gt;Data 2&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            </code>
+        </pre>
+        <h2>Forms</h2>
+        <p>
+            <ul>
+                <li>All the input that you want put them in the form, cause later on, on pressing sumbit they all will be sent.</li>
+                <li><strong>Input</strong>
+                    <ul>
+                    <li>Self closing tag</li>
+                    <li>Type like password, text, submit and so on.</li>
+                    </ul>
+                </li>
+                <li><strong>Label</strong>
+                    <ul>
+                    <li>It defines the input that you take.</li>
+                    <li>Without it you don't know what's inside.</li>
+                    <li>We can use the required attribute, to force the user to enter those info, but not secured, better is to use javascript for that detection.</li>
+                    </ul>
+                </li>
+                <li><strong>Placeholder</strong>
+                    <ul>
+                    <li>Like a hint in the box, when user clicks and types, it'll be removed.</li>
+                    </ul>
+                </li>
+                <li><strong>Value</strong>
+                    <ul>
+                    <li>Defines the initial default value for that field.</li>
+                    </ul>
+                </li>
+                <li><strong>Action</strong>
+                    <ul>
+                    <li>To send for the backend.</li>
+                    <li>Link where that data is going to be sent, like index.php.</li>
+                    <li>How does it send them like what order.</li>
+                    <li>Here comes the <strong>name attribute</strong> and in the PHP file define that you'll be taking that name.</li>
+                    <li>Now comes another important thing, if you really want to send data then you need to use one of the methods like post or post.</li>
+                    <li>Use the post, which won't show them in the URL when they being sent.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>the required is not the defensive, you need to make sure using the js</p>
+        </p>
+
+        <pre>
+            <code class="language-html">
+                &lt;form action="submit-form.php" method="post"&gt;
+                    &lt;label for="username"&gt;Username:&lt;/label&gt;
+                    &lt;input type="text" id="username" name="username" placeholder="Enter your username" required&gt;
+                    
+                    &lt;label for="password"&gt;Password:&lt;/label&gt;
+                    &lt;input type="password" id="password" name="password" placeholder="Enter your password" required&gt;
+        
+                    &lt;input type="submit" value="Submit"&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <!-- Media -->
+        <h2>Media</h2>
+        <p>Media elements include images, audio, and video. </p>
+        <p>controls means the ability to audoplay, skip 5s and show all of those function below</p>
+        <pre>
+            <code class="language-html">
+                &lt;img src="example.jpg" alt="Example"&gt;
+                &lt;audio src="example.mp3" controls&gt;
+                &lt;p>Your browser does not support the audio element.&lt;/p&gt;
+                &lt;/audio&gt;
+                &lt;video src="example.mp4" controls&gt;
+                &lt;p>Your browser does not support the video element.&lt;/p&gt;
+                &lt;/video&gt;
+        </pre>
+            </code>
+        <br><br>
+        <h2>Example</h2>
+        <h3>I will be using it in css,javascript and php examples</h3>
+        <p>Let's create a web page for a registration</p>
+        <pre><code class="language-html">
+            &lt;form action="php_page.php" method="post"&gt;
+                &lt;label for="first_name"&gt;First name&lt;/label&gt;
+                &lt;input type="text" name="first_name" value=""&gt;
+        
+                &lt;label for="last_name"&gt;Last name&lt;/label&gt;
+                &lt;input type="text" name="last_name" value=""&gt;
+        
+                &lt;label for="email"&gt;Email&lt;/label&gt;
+                &lt;input type="text" name="email" value=""&gt;
+        
+                &lt;label for="password"&gt;Password&lt;/label&gt;
+                &lt;input type="password" name="password" value=""&gt;
+
+                &lt;input type="submit" value="Register"&gt;
+
+        
+                &lt;!-- you can add more if you want but I will leave it as this--&gt;
+            &lt;/form&gt;
+        </code></pre>
+    </div> 
+    <script src="Javascript/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="Javascript/index.js"></script>
+</body>
+</html>
