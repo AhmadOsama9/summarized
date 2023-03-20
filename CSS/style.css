@@ -47,7 +47,7 @@ header {
 }
 
 .nav_bar.active {
-    height: 450px;
+    height: 550px;
 }
 
 .nav_bar.active ul {
@@ -126,20 +126,19 @@ header {
         overflow: hidden;
         z-index: -1;
     }
-    
 
 }
 
 .main {
     display: flex;
-    font-size: clamp(0.3rem, 3vw ,2rem);
+    font-size: clamp(0.5rem, 3vw ,2rem);
     font-weight: 600;
     color: var(--secondary-color);
+    min-height: 300px;
 }
 .main .text{
     margin: 1%;
-    font-size: clamp(0.5rem, 3vw, 3rem);
-    
+    font-size: clamp(1rem, 4vw, 2rem);
     
 }
 .slideshow {
@@ -148,6 +147,7 @@ header {
 }
 .slideshow-container{
     overflow: hidden;
+    
 }
 .slide{
     flex: 3;
@@ -155,21 +155,21 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-height: 200px;
-    padding: clamp(0.1rem, 0.5vw, 1rem);
+    max-height: 300px;
+    padding: clamp(0.1rem, 0.5vw, 2rem);
     background-color: var(--secondary-color);
 }
 
 .slide h2{
     color: var(--primary-color);
-    font-size: clamp(0.1rem, 5vw ,3rem);
-    font-weight: clamp(0.5rem, 5vw, 3rem);
+    font-size: clamp(0.5rem, 6vw ,3rem);
+    font-weight: clamp(0.5rem, 6vw, 3rem);
 
 }
 
 .slide p{
     color: var(--primary-color);
-    font-size: clamp(0.1rem, 3vw, 2rem);
+    font-size: clamp(1rem, 5vw, 3rem);
 }
 
 .dots-container{
@@ -179,8 +179,8 @@ header {
 }
 
 .dot{
-    min-height: clamp(0.1rem, 1vw, 0.8rem);
-    min-width: clamp(0.1rem, 1vw, 0.8rem);
+    min-height: clamp(0.1rem, 2vw, 0.8rem);
+    min-width: clamp(0.1rem, 2vw, 0.8rem);
     margin: 0 0.5%;
     border-radius: 50%;
     background-color: #bbb;
