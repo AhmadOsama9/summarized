@@ -51,8 +51,8 @@ for (let i = 0; i < dots.length; i++) {
 
 
 const array = [
-  "this will be the first paragraph",
-  "this will be the second paragraph",
+  "I summarized those programming languages",
+  "I put all the important syntax of each language to be able to start writing",
 ];
 
 const typing = document.querySelector(".typing");
