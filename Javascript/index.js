@@ -2,7 +2,15 @@ hamburger = document.querySelector(".hamburger");
 hamburger.onclick = function() {
     navBar = document.querySelector(".nav_bar");
     navBar.classList.toggle("active"); 
-}
+    main = document.querySelector(".main");
+    main.classList.toggle("menu-open");
+    slideshow = document.querySelector(".slideshow-container");
+    if (slideshow && slideshow.classList.contains("menu-open")) {
+        slideshow.classList.remove("menu-open");
+    } else if (slideshow) {
+        slideshow.classList.add("menu-open");
+    }
+};
 
 const currentPage = window.location.pathname.split('/').pop();
 const navLinks = [...document.querySelectorAll('.nav_bar ul li a')];

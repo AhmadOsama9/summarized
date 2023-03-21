@@ -15,6 +15,10 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    margin: 0;
     background-image: var(--background-color);
 }
 
@@ -115,18 +119,13 @@ header {
         display: flex;
         overflow: hidden;
         width: 100%;
-        
     }
 
-    .main .button{
-        position: relative;
-        z-index: -1;
-    }
-    .slideshow-container{
-        overflow: hidden;
+    .menu-open{
         z-index: -1;
     }
 
+   
 }
 
 .main {
@@ -230,7 +229,6 @@ header {
     font-weight: 600;
     text-decoration: none;
     letter-spacing:clamp(0.3rem, 0.5vw, 1rem);
-    color: #fff;
     transition: 0.5s;
 }
 
